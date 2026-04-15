@@ -4,6 +4,7 @@
  */
 package Pantallas;
 
+import Pantallas.*;
 import Controlador.Coordinador;
 
 /**
@@ -13,19 +14,18 @@ import Controlador.Coordinador;
 public class FrmRegistrarse extends javax.swing.JFrame {
     private Coordinador coordinador;
 
-    /**
-     * Creates new form frmRegistrarse
-     */
     public FrmRegistrarse() {
         initComponents();
     }
 
+    /**
+     * Creates new form frmInicioSesion
+     */
     public FrmRegistrarse(Coordinador coordinador) {
         this.coordinador = coordinador;
         initComponents();
+        
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,190 +37,180 @@ public class FrmRegistrarse extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanelRegistrarse = new javax.swing.JPanel();
+        registrate = new javax.swing.JLabel();
+        txtContrasenia = new javax.swing.JPasswordField();
+        textContrasenia = new javax.swing.JLabel();
+        txtCorreo = new javax.swing.JTextField();
+        textCorreo = new javax.swing.JLabel();
         jPanelAzul = new javax.swing.JPanel();
         textiniciaSesion = new javax.swing.JLabel();
-        textCorreo = new javax.swing.JLabel();
-        textContrasenia = new javax.swing.JLabel();
-        registrarseContra = new javax.swing.JPasswordField();
-        botonIngresar = new javax.swing.JButton();
-        registrate = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        btnRegistrarse = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtConfirmacionContrasenia = new javax.swing.JPasswordField();
         textContrasenia1 = new javax.swing.JLabel();
-        registrarseContra1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(202, 220, 255));
-
-        jPanelRegistrarse.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanelAzul.setBackground(new java.awt.Color(31, 92, 204));
-        jPanelAzul.setPreferredSize(new java.awt.Dimension(597, 50));
-
-        textiniciaSesion.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
-        textiniciaSesion.setForeground(new java.awt.Color(255, 255, 255));
-        textiniciaSesion.setText("Registrarse");
-
-        javax.swing.GroupLayout jPanelAzulLayout = new javax.swing.GroupLayout(jPanelAzul);
-        jPanelAzul.setLayout(jPanelAzulLayout);
-        jPanelAzulLayout.setHorizontalGroup(
-            jPanelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAzulLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(textiniciaSesion)
-                .addGap(136, 136, 136))
-        );
-        jPanelAzulLayout.setVerticalGroup(
-            jPanelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAzulLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(textiniciaSesion)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-
-        textCorreo.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        textCorreo.setText("Correo");
-
-        textContrasenia.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        textContrasenia.setText("Contraseña");
-
-        registrarseContra.setBackground(new java.awt.Color(234, 230, 230));
-
-        botonIngresar.setBackground(new java.awt.Color(31, 92, 204));
-        botonIngresar.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        botonIngresar.setForeground(new java.awt.Color(255, 255, 255));
-        botonIngresar.setText("Registrarse");
-        botonIngresar.setAutoscrolls(true);
-        botonIngresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonIngresarActionPerformed(evt);
-            }
-        });
+        jPanel1.setBackground(new java.awt.Color(248, 248, 248));
+        jPanel1.setPreferredSize(new java.awt.Dimension(845, 465));
 
         registrate.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        registrate.setText("<html>¿Ya tienes cuenta? <font color=\"blue\"><u>Inicia sesión</u></font></html>");
-        registrate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registrate.setForeground(new java.awt.Color(0, 0, 0));
+        registrate.setText("<html>¿Ya tienes cuenta? <font color=\"blue\"><u>Iniciar Sesión</u></font></html>");
+        registrate.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         registrate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 registrateMouseClicked(evt);
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtContrasenia.setBackground(new java.awt.Color(234, 230, 230));
+
+        textContrasenia.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        textContrasenia.setForeground(new java.awt.Color(0, 0, 0));
+        textContrasenia.setText("Contraseña");
+
+        txtCorreo.setBackground(new java.awt.Color(234, 230, 230));
+        txtCorreo.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        txtCorreo.setForeground(new java.awt.Color(217, 217, 217));
+        txtCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtCorreoActionPerformed(evt);
             }
         });
 
-        textContrasenia1.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        textCorreo.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        textCorreo.setForeground(new java.awt.Color(0, 0, 0));
+        textCorreo.setText("Correo");
+
+        jPanelAzul.setBackground(new java.awt.Color(31, 92, 204));
+        jPanelAzul.setPreferredSize(new java.awt.Dimension(597, 50));
+
+        textiniciaSesion.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        textiniciaSesion.setForeground(new java.awt.Color(255, 255, 255));
+        textiniciaSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        textiniciaSesion.setText("INICIAR SESION");
+
+        javax.swing.GroupLayout jPanelAzulLayout = new javax.swing.GroupLayout(jPanelAzul);
+        jPanelAzul.setLayout(jPanelAzulLayout);
+        jPanelAzulLayout.setHorizontalGroup(
+            jPanelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(textiniciaSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanelAzulLayout.setVerticalGroup(
+            jPanelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAzulLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textiniciaSesion)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+
+        btnRegistrarse.setBackground(new java.awt.Color(44, 114, 243));
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Registrarse");
+
+        javax.swing.GroupLayout btnRegistrarseLayout = new javax.swing.GroupLayout(btnRegistrarse);
+        btnRegistrarse.setLayout(btnRegistrarseLayout);
+        btnRegistrarseLayout.setHorizontalGroup(
+            btnRegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+        );
+        btnRegistrarseLayout.setVerticalGroup(
+            btnRegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+        );
+
+        txtConfirmacionContrasenia.setBackground(new java.awt.Color(234, 230, 230));
+
+        textContrasenia1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        textContrasenia1.setForeground(new java.awt.Color(0, 0, 0));
         textContrasenia1.setText("Confirmar contraseña");
-
-        registrarseContra1.setBackground(new java.awt.Color(234, 230, 230));
-
-        javax.swing.GroupLayout jPanelRegistrarseLayout = new javax.swing.GroupLayout(jPanelRegistrarse);
-        jPanelRegistrarse.setLayout(jPanelRegistrarseLayout);
-        jPanelRegistrarseLayout.setHorizontalGroup(
-            jPanelRegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelAzul, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrarseLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelRegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textContrasenia1)
-                    .addComponent(textContrasenia)
-                    .addComponent(textCorreo)
-                    .addComponent(registrarseContra)
-                    .addComponent(jTextField1)
-                    .addComponent(registrarseContra1, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE))
-                .addGap(53, 53, 53))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrarseLayout.createSequentialGroup()
-                .addContainerGap(134, Short.MAX_VALUE)
-                .addGroup(jPanelRegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrarseLayout.createSequentialGroup()
-                        .addComponent(registrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(132, 132, 132))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrarseLayout.createSequentialGroup()
-                        .addComponent(botonIngresar)
-                        .addGap(184, 184, 184))))
-        );
-        jPanelRegistrarseLayout.setVerticalGroup(
-            jPanelRegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRegistrarseLayout.createSequentialGroup()
-                .addComponent(jPanelAzul, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(textCorreo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textContrasenia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(registrarseContra, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textContrasenia1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(registrarseContra1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(botonIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(registrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelAzul, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(jPanelRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(registrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textContrasenia1)
+                            .addComponent(textContrasenia)
+                            .addComponent(textCorreo)
+                            .addComponent(txtContrasenia)
+                            .addComponent(txtCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
+                            .addComponent(txtConfirmacionContrasenia))))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelRegistrarse, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanelAzul, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addComponent(textCorreo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(textContrasenia)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(textContrasenia1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtConfirmacionContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(registrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIngresarActionPerformed
-        coordinador.mostrarInicio();
-    }//GEN-LAST:event_botonIngresarActionPerformed
-
     private void registrateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registrateMouseClicked
-        coordinador.mostrarInicioSesion();
+        coordinador.mostrarRegistro();
     }//GEN-LAST:event_registrateMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtCorreoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonIngresar;
+    private javax.swing.JPanel btnRegistrarse;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelAzul;
-    private javax.swing.JPanel jPanelRegistrarse;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPasswordField registrarseContra;
-    private javax.swing.JPasswordField registrarseContra1;
     private javax.swing.JLabel registrate;
     private javax.swing.JLabel textContrasenia;
     private javax.swing.JLabel textContrasenia1;
     private javax.swing.JLabel textCorreo;
     private javax.swing.JLabel textiniciaSesion;
+    private javax.swing.JPasswordField txtConfirmacionContrasenia;
+    private javax.swing.JPasswordField txtContrasenia;
+    private javax.swing.JTextField txtCorreo;
     // End of variables declaration//GEN-END:variables
 }
