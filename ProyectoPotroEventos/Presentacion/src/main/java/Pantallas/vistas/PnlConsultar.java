@@ -1,31 +1,29 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package Pantallas;
+package Pantallas.vistas;
 
-import Controlador.Coordinador;
+import Controlador.interfaz.ICoordinadorAplicacion;
 
 /**
  *
- * @author Dayanara Peralta G
+ * @author Aaron Burciaga - 262788
+ * @author Brian Sandoval - 262741
+ * @author Dayanara Peralta - 262695
+ * @author María Valdez - 262775
  */
-public class FrmConsultar extends javax.swing.JFrame {
-    private Coordinador coordinador;
+public class PnlConsultar extends javax.swing.JPanel {
+
+    private ICoordinadorAplicacion coordinador;
 
     /**
-     * Creates new form FrmConsultar
+     * Creates new form PnlConsultar
      */
-    public FrmConsultar() {
-        initComponents();
-    }
-
-    public FrmConsultar(Coordinador coordinador) {
+    public PnlConsultar(ICoordinadorAplicacion coordinador) {
         this.coordinador = coordinador;
         initComponents();
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,12 +34,6 @@ public class FrmConsultar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelInicio = new javax.swing.JPanel();
-        jPanelAzul = new javax.swing.JPanel();
-        textPotroEventos = new javax.swing.JLabel();
-        jPanelAzulOscuro = new javax.swing.JPanel();
-        busqueda = new javax.swing.JTextField();
-        botonConsultar = new javax.swing.JButton();
         categoria2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -83,76 +75,7 @@ public class FrmConsultar extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(845, 465));
-
-        jPanelInicio.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanelAzul.setBackground(new java.awt.Color(31, 92, 204));
-        jPanelAzul.setPreferredSize(new java.awt.Dimension(597, 50));
-
-        textPotroEventos.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
-        textPotroEventos.setForeground(new java.awt.Color(255, 255, 255));
-        textPotroEventos.setText("PotroEventos");
-
-        jPanelAzulOscuro.setBackground(new java.awt.Color(0, 49, 141));
-
-        busqueda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                busquedaActionPerformed(evt);
-            }
-        });
-
-        botonConsultar.setBackground(new java.awt.Color(0, 49, 141));
-        botonConsultar.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        botonConsultar.setForeground(new java.awt.Color(255, 255, 255));
-        botonConsultar.setText("Filtrar");
-        botonConsultar.setBorder(null);
-        botonConsultar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonConsultarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelAzulOscuroLayout = new javax.swing.GroupLayout(jPanelAzulOscuro);
-        jPanelAzulOscuro.setLayout(jPanelAzulOscuroLayout);
-        jPanelAzulOscuroLayout.setHorizontalGroup(
-            jPanelAzulOscuroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAzulOscuroLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(busqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(botonConsultar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelAzulOscuroLayout.setVerticalGroup(
-            jPanelAzulOscuroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAzulOscuroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelAzulOscuroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(busqueda, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                    .addComponent(botonConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout jPanelAzulLayout = new javax.swing.GroupLayout(jPanelAzul);
-        jPanelAzul.setLayout(jPanelAzulLayout);
-        jPanelAzulLayout.setHorizontalGroup(
-            jPanelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAzulLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(textPotroEventos)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanelAzulOscuro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanelAzulLayout.setVerticalGroup(
-            jPanelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAzulLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(textPotroEventos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jPanelAzulOscuro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        setOpaque(false);
 
         categoria2.setPreferredSize(new java.awt.Dimension(250, 100));
 
@@ -258,7 +181,7 @@ public class FrmConsultar extends javax.swing.JFrame {
                     .addComponent(jLabel17)
                     .addComponent(jLabel18)
                     .addComponent(jButton5))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         categoria3Layout.setVerticalGroup(
             categoria3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,7 +308,7 @@ public class FrmConsultar extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addComponent(jButton2))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         categoria4Layout.setVerticalGroup(
             categoria4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -505,7 +428,7 @@ public class FrmConsultar extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(jLabel15)
                     .addComponent(jButton4))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         categoria5Layout.setVerticalGroup(
             categoria5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -541,90 +464,66 @@ public class FrmConsultar extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanelInicioLayout = new javax.swing.GroupLayout(jPanelInicio);
-        jPanelInicio.setLayout(jPanelInicioLayout);
-        jPanelInicioLayout.setHorizontalGroup(
-            jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelAzul, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
-            .addGroup(jPanelInicioLayout.createSequentialGroup()
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton7)
-                    .addGroup(jPanelInicioLayout.createSequentialGroup()
-                        .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1)
                             .addComponent(categoria1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(categoria4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2)
                             .addComponent(categoria5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(categoria2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3)
                             .addComponent(categoria6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(categoria3, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanelInicioLayout.setVerticalGroup(
-            jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelInicioLayout.createSequentialGroup()
-                .addComponent(jPanelAzul, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
-                .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(categoria1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(categoria3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(categoria2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(categoria5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
                     .addComponent(categoria6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(categoria4, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton7)
                 .addGap(30, 30, 30))
         );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void busquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busquedaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_busquedaActionPerformed
-
-    private void botonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConsultarActionPerformed
-        coordinador.mostrarConsultar();
-    }//GEN-LAST:event_botonConsultarActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // coordinador.mostrarConsultarEvento();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         coordinador.mostrarInicio();//se puede volver a la pantalla de inicio o a la pantalla de eventos
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        coordinador.mostrarConsultarEvento();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonConsultar;
-    private javax.swing.JTextField busqueda;
     private javax.swing.JPanel categoria1;
     private javax.swing.JPanel categoria2;
     private javax.swing.JPanel categoria3;
@@ -665,9 +564,5 @@ public class FrmConsultar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanelAzul;
-    private javax.swing.JPanel jPanelAzulOscuro;
-    private javax.swing.JPanel jPanelInicio;
-    private javax.swing.JLabel textPotroEventos;
     // End of variables declaration//GEN-END:variables
 }

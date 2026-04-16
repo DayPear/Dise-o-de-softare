@@ -4,27 +4,35 @@
  */
 package Pantallas;
 
-import Pantallas.*;
-import Controlador.Coordinador;
+import Controlador.interfaz.ICoordinadorAplicacion;
+import utilerias.BotonUtileria;
 
 /**
  *
- * @author Dayanara Peralta G
+ * @author Aaron Burciaga - 262788
+ * @author Brian Sandoval - 262741
+ * @author Dayanara Peralta - 262695
+ * @author María Valdez - 262775
  */
 public class FrmRegistrarse extends javax.swing.JFrame {
-    private Coordinador coordinador;
+
+    private ICoordinadorAplicacion coordinador;
 
     public FrmRegistrarse() {
         initComponents();
+
     }
 
     /**
      * Creates new form frmInicioSesion
+     *
+     * @param coordinador
      */
-    public FrmRegistrarse(Coordinador coordinador) {
+    public FrmRegistrarse(ICoordinadorAplicacion coordinador) {
         this.coordinador = coordinador;
         initComponents();
-        
+        BotonUtileria.estilizarBoton(btnRegistrarse);
+        BotonUtileria.estilizarBoton(iniciaSesion);
     }
 
     /**
@@ -37,7 +45,7 @@ public class FrmRegistrarse extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        registrate = new javax.swing.JLabel();
+        iniciaSesion = new javax.swing.JLabel();
         txtContrasenia = new javax.swing.JPasswordField();
         textContrasenia = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
@@ -54,13 +62,13 @@ public class FrmRegistrarse extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(248, 248, 248));
         jPanel1.setPreferredSize(new java.awt.Dimension(845, 465));
 
-        registrate.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        registrate.setForeground(new java.awt.Color(0, 0, 0));
-        registrate.setText("<html>¿Ya tienes cuenta? <font color=\"blue\"><u>Iniciar Sesión</u></font></html>");
-        registrate.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        registrate.addMouseListener(new java.awt.event.MouseAdapter() {
+        iniciaSesion.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        iniciaSesion.setForeground(new java.awt.Color(0, 0, 0));
+        iniciaSesion.setText("<html>¿Ya tienes cuenta? <font color=\"blue\"><u>Iniciar Sesión</u></font></html>");
+        iniciaSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        iniciaSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                registrateMouseClicked(evt);
+                iniciaSesionMouseClicked(evt);
             }
         });
 
@@ -89,7 +97,7 @@ public class FrmRegistrarse extends javax.swing.JFrame {
         textiniciaSesion.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         textiniciaSesion.setForeground(new java.awt.Color(255, 255, 255));
         textiniciaSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        textiniciaSesion.setText("INICIAR SESION");
+        textiniciaSesion.setText("Registrarse");
 
         javax.swing.GroupLayout jPanelAzulLayout = new javax.swing.GroupLayout(jPanelAzul);
         jPanelAzul.setLayout(jPanelAzulLayout);
@@ -141,7 +149,7 @@ public class FrmRegistrarse extends javax.swing.JFrame {
                         .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(171, 171, 171)
-                        .addComponent(registrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(iniciaSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -172,7 +180,7 @@ public class FrmRegistrarse extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addComponent(registrate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(iniciaSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65))
         );
 
@@ -190,9 +198,9 @@ public class FrmRegistrarse extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void registrateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registrateMouseClicked
-        coordinador.mostrarRegistro();
-    }//GEN-LAST:event_registrateMouseClicked
+    private void iniciaSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iniciaSesionMouseClicked
+        coordinador.mostrarInicioSesion();
+    }//GEN-LAST:event_iniciaSesionMouseClicked
 
     private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
@@ -201,10 +209,10 @@ public class FrmRegistrarse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnRegistrarse;
+    private javax.swing.JLabel iniciaSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelAzul;
-    private javax.swing.JLabel registrate;
     private javax.swing.JLabel textContrasenia;
     private javax.swing.JLabel textContrasenia1;
     private javax.swing.JLabel textCorreo;

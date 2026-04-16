@@ -4,18 +4,21 @@
  */
 package Pantallas;
 
-import Pantallas.*;
-import Controlador.Coordinador;
+import Controlador.interfaz.ICoordinadorAplicacion;
 import java.awt.Color;
+import utilerias.BotonUtileria;
 
 /**
  *
- * @author Dayanara Peralta G
+ * @author Aaron Burciaga - 262788
+ * @author Brian Sandoval - 262741
+ * @author Dayanara Peralta - 262695
+ * @author María Valdez - 262775
  */
 public class FrmInicioSesion extends javax.swing.JFrame {
-    
-    private Coordinador coordinador;
-    
+
+    private ICoordinadorAplicacion coordinador;
+
     public FrmInicioSesion() {
         initComponents();
     }
@@ -23,10 +26,11 @@ public class FrmInicioSesion extends javax.swing.JFrame {
     /**
      * Creates new form frmInicioSesion
      */
-    public FrmInicioSesion(Coordinador coordinador) {
+    public FrmInicioSesion(ICoordinadorAplicacion coordinador) {
         this.coordinador = coordinador;
         initComponents();
-        
+        BotonUtileria.estilizarBoton(btnIngresar);
+        BotonUtileria.estilizarBoton(registrate);
     }
 
     /**
@@ -47,7 +51,7 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         jPanelAzul = new javax.swing.JPanel();
         textiniciaSesion = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        ingresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -126,29 +130,26 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         );
 
         btnIngresar.setBackground(new java.awt.Color(44, 114, 243));
-        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnIngresarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnIngresarMouseExited(evt);
+
+        ingresar.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        ingresar.setForeground(new java.awt.Color(255, 255, 255));
+        ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ingresar.setText("Ingresar");
+        ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ingresarMouseClicked(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Ingresar");
 
         javax.swing.GroupLayout btnIngresarLayout = new javax.swing.GroupLayout(btnIngresar);
         btnIngresar.setLayout(btnIngresarLayout);
         btnIngresarLayout.setHorizontalGroup(
             btnIngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+            .addComponent(ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
         );
         btnIngresarLayout.setVerticalGroup(
             btnIngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+            .addComponent(ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -215,14 +216,6 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
 
-    private void btnIngresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseEntered
-        btnIngresar.setBackground(Color.decode("#00318D"));
-    }//GEN-LAST:event_btnIngresarMouseEntered
-
-    private void btnIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseExited
-        btnIngresar.setBackground(Color.decode("#2C72F3"));
-    }//GEN-LAST:event_btnIngresarMouseExited
-
     private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
         if (txtCorreo.getText().equals("Ingrese un correo")) {
             txtCorreo.setText("");
@@ -251,10 +244,14 @@ public class FrmInicioSesion extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtContraseniaFocusLost
 
+    private void ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarMouseClicked
+        coordinador.mostrarInicio();
+    }//GEN-LAST:event_ingresarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnIngresar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel ingresar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelAzul;
     private javax.swing.JLabel registrate;

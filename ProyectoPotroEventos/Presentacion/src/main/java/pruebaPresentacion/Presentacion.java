@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.presentacion;
+package pruebaPresentacion;
 
-import Controlador.Coordinador;
+import Controlador.coordinador.CoordinadorAplicacion;
 
 /**
  *
@@ -13,7 +13,7 @@ import Controlador.Coordinador;
 public class Presentacion {
 
     public static void main(String[] args) {
-        Coordinador coordinador = new Coordinador();
+        CoordinadorAplicacion coordinador = new CoordinadorAplicacion();
         coordinador.iniciaSistema();
     }
 }

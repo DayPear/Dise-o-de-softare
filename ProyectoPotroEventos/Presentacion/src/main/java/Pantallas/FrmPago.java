@@ -4,15 +4,18 @@
  */
 package Pantallas;
 
-import Pantallas.*;
-import Controlador.Coordinador;
+import Controlador.interfaz.ICoordinadorAplicacion;
 
 /**
  *
- * @author Dayanara Peralta G
+ * @author Aaron Burciaga - 262788
+ * @author Brian Sandoval - 262741
+ * @author Dayanara Peralta - 262695
+ * @author María Valdez - 262775
  */
 public class FrmPago extends javax.swing.JFrame {
-    private Coordinador coordinador;
+
+    private ICoordinadorAplicacion coordinador;
 
     /**
      * Creates new form FrmInicio
@@ -21,12 +24,10 @@ public class FrmPago extends javax.swing.JFrame {
         initComponents();
     }
 
-    public FrmPago(Coordinador coordinador) {
+    public FrmPago(ICoordinadorAplicacion coordinador) {
         this.coordinador = coordinador;
         initComponents();
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
