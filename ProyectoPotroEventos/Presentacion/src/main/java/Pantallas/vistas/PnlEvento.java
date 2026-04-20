@@ -13,10 +13,13 @@ package Pantallas.vistas;
  */
 public class PnlEvento extends javax.swing.JPanel {
 
+    private EventoDTO evento;
+    
     /**
      * Creates new form pnlResumenEvento
      */
-    public PnlEvento() {
+    public PnlEvento(EventoDTO evento) {
+        this.evento = evento;
         initComponents();
     }
 
@@ -33,8 +36,7 @@ public class PnlEvento extends javax.swing.JPanel {
         lblFechaHora = new javax.swing.JLabel();
         lblUbicacion = new javax.swing.JLabel();
         iconEvento = new javax.swing.JLabel();
-        btnCancelar = new javax.swing.JButton();
-        btnQR = new javax.swing.JButton();
+        btnMostrar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(221, 212, 212));
 
@@ -49,13 +51,10 @@ public class PnlEvento extends javax.swing.JPanel {
 
         iconEvento.setText("iconEvento");
 
-        btnCancelar.setBackground(new java.awt.Color(204, 51, 0));
-        btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnCancelar.setText("Cancelar");
-
-        btnQR.setBackground(new java.awt.Color(233, 134, 20));
-        btnQR.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnQR.setText("QR");
+        btnMostrar.setBackground(new java.awt.Color(31, 92, 204));
+        btnMostrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMostrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrar.setText("Mostrar Informacion");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -64,17 +63,20 @@ public class PnlEvento extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(iconEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFechaHora)
-                    .addComponent(lblNombre)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnCancelar)
-                            .addComponent(lblUbicacion))
-                        .addGap(30, 30, 30)
-                        .addComponent(btnQR)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblFechaHora)
+                            .addComponent(lblNombre)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(lblUbicacion)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(btnMostrar)
+                        .addGap(36, 36, 36))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,17 +92,14 @@ public class PnlEvento extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(lblUbicacion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCancelar)
-                            .addComponent(btnQR))))
+                        .addComponent(btnMostrar)))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnQR;
+    private javax.swing.JButton btnMostrar;
     private javax.swing.JLabel iconEvento;
     private javax.swing.JLabel lblFechaHora;
     private javax.swing.JLabel lblNombre;
