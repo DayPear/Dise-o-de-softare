@@ -17,9 +17,9 @@ public interface ICoordinadorAplicacion {
 
     public void mostrarInicio();
 
-    public void mostrarConsultar();
+    public void mostrarConsultar(UsuarioDTO usuario);
 
-    public void mostrarInfoEvento();
+    public void mostrarInfoEvento(EventoDTO evento);
 
     public void finalizarCompra();
 

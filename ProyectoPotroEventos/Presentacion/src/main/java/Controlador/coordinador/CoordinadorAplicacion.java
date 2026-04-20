@@ -7,6 +7,9 @@ import Pantallas.FrmPlantillaSistema;
 import Pantallas.FrmRegistrarse;
 import Pantallas.FrmRegistroItson;
 import Pantallas.frmDetallesCompra;
+import Pantallas.vistas.PnlCategorias;
+import Pantallas.vistas.PnlConsultar;
+import Pantallas.vistas.PnlInfoEvento;
 
 /**
  *
@@ -65,17 +68,44 @@ public class CoordinadorAplicacion implements ICoordinadorAplicacion {
 
     @Override
     public void mostrarInicio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ocultarTodo();
+        if(frmPlantilla == null){
+            frmPlantilla = new FrmPlantillaSistema(this);
+        }
+        frmPlantilla.getContentPane().removeAll();
+        frmPlantilla.add(new PnlCategorias(this));
+        frmPlantilla.getContentPane().revalidate();
+        frmPlantilla.getContentPane().repaint();
+        frmPlantilla.setLocationRelativeTo(null);
+        frmPlantilla.setVisible(true);
     }
 
     @Override
-    public void mostrarConsultar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mostrarConsultar(UsuarioDTO usuario) {
+        ocultarTodo();
+        if(frmPlantilla == null){
+            frmPlantilla = new FrmPlantillaSistema(this);
+        }
+        frmPlantilla.getContentPane().removeAll();
+        frmPlantilla.add(new PnlConsultar(this, usuario));
+        frmPlantilla.getContentPane().revalidate();
+        frmPlantilla.getContentPane().repaint();
+        frmPlantilla.setLocationRelativeTo(null);
+        frmPlantilla.setVisible(true);
     }
 
     @Override
-    public void mostrarInfoEvento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mostrarInfoEvento(EventoDTO evento) {
+        ocultarTodo();
+        if(frmPlantilla == null){
+            frmPlantilla = new FrmPlantillaSistema(this);
+        }
+        frmPlantilla.getContentPane().removeAll();
+        frmPlantilla.add(new PnlInfoEvento(this, evento));
+        frmPlantilla.getContentPane().revalidate();
+        frmPlantilla.getContentPane().repaint();
+        frmPlantilla.setLocationRelativeTo(null);
+        frmPlantilla.setVisible(true);
     }
 
     @Override

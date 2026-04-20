@@ -11,14 +11,14 @@ package Pantallas;
  * @author Dayanara Peralta - 262695
  * @author María Valdez - 262775
  */
-public class frmRegistroItson extends javax.swing.JFrame {
+public class FrmRegistroItson extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmRegistroItson.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmRegistroItson.class.getName());
 
     /**
      * Creates new form frmRegistroItson
      */
-    public frmRegistroItson() {
+    public FrmRegistroItson() {
         initComponents();
     }
 
