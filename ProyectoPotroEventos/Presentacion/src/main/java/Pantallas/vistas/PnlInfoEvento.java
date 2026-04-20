@@ -15,15 +15,13 @@ import Controlador.interfaz.ICoordinadorAplicacion;
  */
 public class PnlInfoEvento extends javax.swing.JPanel {
 
-    private EventoDTO evento;
     private ICoordinadorAplicacion coordinador;
 
     /**
      * Creates new form PnlInfoEvento
      */
-    public PnlInfoEvento(ICoordinadorAplicacion coordinador, EventoDTO evento) {
+    public PnlInfoEvento(ICoordinadorAplicacion coordinador) {
         this.coordinador = coordinador;
-        this.evento = evento;
         initComponents();
     }
 
